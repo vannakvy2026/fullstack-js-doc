@@ -1,0 +1,82 @@
+# Fullstack JavaScript Documentation
+
+import Link from 'next/link'
+
+<div className="relative isolate overflow-hidden min-h-[75vh] flex flex-col items-center justify-center px-6 py-20 text-center">
+  {/* Background Glows */}
+  <div className="absolute inset-x-0 -top-40 -z-10 transform-gpu overflow-hidden blur-3xl sm:-top-80" aria-hidden="true">
+    <div className="relative left-[calc(50%-11rem)] aspect-1155/678 w-[36rem] -translate-x-1/2 rotate-[30deg] bg-gradient-to-tr from-blue-400 to-indigo-600 opacity-20 sm:left-[calc(50%-30rem)] sm:w-[72.1875rem] [clip-path:polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)]"></div>
+  </div>
+
+  {/* Hero Header */}
+  <div className="mx-auto max-w-3xl">
+    <div className="hidden sm:mb-8 sm:flex sm:justify-center">
+      <div className="relative rounded-full px-3 py-1 text-sm leading-6 text-neutral-600 dark:text-neutral-400 ring-1 ring-neutral-900/10 dark:ring-neutral-100/10 hover:ring-neutral-900/20 dark:hover:ring-neutral-100/20 transition-all select-none">
+        Announcing Nextra v4 with Next.js 16 Support.{' '}
+        <Link href="/javascript" className="font-semibold text-indigo-600 dark:text-indigo-400">
+          <span className="absolute inset-0" aria-hidden="true" />
+          Read docs <span aria-hidden="true">&rarr;</span>
+        </Link>
+      </div>
+    </div>
+    
+    <h1 className="text-4xl font-extrabold tracking-tight text-neutral-900 dark:text-white sm:text-6xl bg-gradient-to-r from-blue-600 via-indigo-500 to-violet-600 dark:from-blue-400 dark:via-indigo-300 dark:to-violet-400 bg-clip-text text-transparent py-2">Fullstack JavaScript Architecture</h1>
+    
+    <p className="mt-6 text-lg leading-8 text-neutral-600 dark:text-neutral-300 max-w-xl mx-auto">Build modern, scalable applications with a unified JS/TS developer experience. Harness the power of Next.js 16, React Compiler, and Nextra 4.</p>
+
+    {/* Call to Action */}
+    <div className="mt-10 flex items-center justify-center gap-x-6">
+      <Link
+        href="/javascript"
+        className="rounded-lg bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-500 hover:to-indigo-500 px-6 py-3 text-sm font-semibold text-white shadow-md hover:shadow-lg transition-all focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
+      >
+        Get Started
+      </Link>
+      <a
+        href="https://github.com/vannakvy2026/fullstack-js-doc"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="text-sm font-semibold leading-6 text-neutral-900 dark:text-neutral-100 flex items-center gap-1 hover:text-indigo-500 transition-colors"
+      >
+        View on GitHub <span aria-hidden="true">→</span>
+      </a>
+    </div>
+  </div>
+
+  {/* Feature Grid */}
+  <div className="mx-auto mt-24 max-w-5xl sm:mt-32">
+    <div className="grid grid-cols-1 gap-8 sm:grid-cols-3">
+      {/* Card 1 */}
+      <div className="relative group overflow-hidden rounded-2xl border border-neutral-200 dark:border-neutral-800 bg-white/50 dark:bg-neutral-900/50 backdrop-blur-md p-8 text-left transition-all hover:border-neutral-300 dark:hover:border-neutral-700">
+        <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-blue-600 text-white font-bold select-none mb-6">
+          ⚡
+        </div>
+        <h3 className="text-lg font-semibold text-neutral-900 dark:text-white group-hover:text-indigo-500 transition-colors">Next.js 16</h3>
+        <p className="mt-2 text-sm text-neutral-600 dark:text-neutral-400">Leverage Turbopack as the default bundler and the brand new React Compiler for automatic rendering memoization.</p>
+      </div>
+
+      {/* Card 2 */}
+      <div className="relative group overflow-hidden rounded-2xl border border-neutral-200 dark:border-neutral-800 bg-white/50 dark:bg-neutral-900/50 backdrop-blur-md p-8 text-left transition-all hover:border-neutral-300 dark:hover:border-neutral-700">
+        <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-indigo-600 text-white font-bold select-none mb-6">
+          📖
+        </div>
+        <h3 className="text-lg font-semibold text-neutral-900 dark:text-white group-hover:text-indigo-500 transition-colors">Nextra v4</h3>
+        <p className="mt-2 text-sm text-neutral-600 dark:text-neutral-400">Native Next.js App Router support, built-in Pagefind static search, markdown code block highlighting, and Tailwind CSS v4 support.</p>
+      </div>
+
+      {/* Card 3 */}
+      <div className="relative group overflow-hidden rounded-2xl border border-neutral-200 dark:border-neutral-800 bg-white/50 dark:bg-neutral-900/50 backdrop-blur-md p-8 text-left transition-all hover:border-neutral-300 dark:hover:border-neutral-700">
+        <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-violet-600 text-white font-bold select-none mb-6">
+          🛠️
+        </div>
+        <h3 className="text-lg font-semibold text-neutral-900 dark:text-white group-hover:text-indigo-500 transition-colors">Fullstack Type Safety</h3>
+        <p className="mt-2 text-sm text-neutral-600 dark:text-neutral-400">Complete, end-to-end type safety mapping from database models to frontend React Server Components using TypeScript.</p>
+      </div>
+    </div>
+  </div>
+
+  {/* Background Glows bottom */}
+  <div className="absolute inset-x-0 top-[calc(100%-13rem)] -z-10 transform-gpu overflow-hidden blur-3xl sm:top-[calc(100%-30rem)]" aria-hidden="true">
+    <div className="relative left-[calc(50%+3rem)] aspect-1155/678 w-[36rem] -translate-x-1/2 bg-gradient-to-tr from-indigo-500 to-violet-500 opacity-20 sm:left-[calc(50%+36rem)] sm:w-[72.1875rem] [clip-path:polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)]"></div>
+  </div>
+</div>

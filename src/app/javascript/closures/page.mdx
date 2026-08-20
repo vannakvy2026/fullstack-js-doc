@@ -1,0 +1,33 @@
+# Closures & Scope
+
+A **closure** is the combination of a function bundled together (enclosed) with references to its surrounding state (the **lexical environment**). 
+
+In other words, a closure gives an inner function access to the outer function's scope even after the outer function has finished executing.
+
+---
+
+## Code Example
+
+Here is a simple example showing how lexical state is preserved:
+
+```javascript filename="closure-example.js"
+function makeCounter() {
+  let count = 0; // State variable enclosed by makeCounter
+  
+  return function increment() {
+    count++; // Accesses parent environment's scope
+    return count;
+  };
+}
+
+const counter = makeCounter();
+console.log(counter()); // Output: 1
+console.log(counter()); // Output: 2
+```
+
+In the example above, `increment` maintains a reference to the `count` variable declared in `makeCounter`'s environment long after `makeCounter` has returned.
+
+---
+
+> [!NOTE]
+> Closures are widely used in JavaScript for data privacy (encapsulation), callback handlers, and memoization patterns.

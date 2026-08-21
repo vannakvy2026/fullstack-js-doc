@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { Geist, Geist_Mono } from 'next/font/google'
+import { Geist, Geist_Mono, Google_Sans } from 'next/font/google'
 import { Footer, Layout, Navbar } from 'nextra-theme-docs'
 import { Head } from 'nextra/components'
 import { getPageMap } from 'nextra/page-map'
@@ -13,6 +13,11 @@ const geistSans = Geist({
 
 const geistMono = Geist_Mono({
   variable: '--font-geist-mono',
+  subsets: ['latin'],
+})
+
+const googleSans = Google_Sans({
+  variable: '--font-google-sans',
   subsets: ['latin'],
 })
 
@@ -38,7 +43,7 @@ export default async function RootLayout({
       lang="en"
       dir="ltr"
       suppressHydrationWarning
-      className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+      className={`${geistSans.variable} ${geistMono.variable} ${googleSans.variable} antialiased`}
     >
       <Head />
       <body>
@@ -49,7 +54,7 @@ export default async function RootLayout({
               logo={
                 <div className="flex items-center gap-2 font-bold text-lg select-none">
                   <span className="bg-gradient-to-r from-blue-600 to-indigo-600 text-white px-2 py-0.5 rounded text-xs tracking-wider">JS</span>
-                  <span className="bg-gradient-to-r from-neutral-900 to-neutral-600 dark:from-neutral-100 dark:to-neutral-400 bg-clip-text text-transparent">Fullstack Doc</span>
+                  <span className="font-google-sans   bg-gradient-to-r from-neutral-900 to-neutral-600 dark:from-neutral-100 dark:to-neutral-400 bg-clip-text text-transparent">Fullstack Doc</span>
                 </div>
               }
               projectLink="https://github.com/vannakvy2026/fullstack-js-doc"

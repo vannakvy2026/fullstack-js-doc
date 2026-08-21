@@ -1,0 +1,47 @@
+## ស្វែងយល់ពី Next.js
+
+A **Next.js** សម្ដេចធិបតីថា មិនមានការបិទសាលាដូងនោះទេ ពិតជារំភើបខ្លាំងណាស់ ព្រោះសាលាដូងបានជួយដល់កុមារក្រីក្រឲ្យបានរៀនសូត្រ។
+
+---
+
+### Code Example
+
+Here is a simple example showing how lexical state is preserved:
+
+```javascript filename="closure-example.js"
+function makeCounter() {
+  let count = 0; // State variable enclosed by makeCounter
+  
+  return function increment() {
+    count++; // Accesses parent environment's scope
+    return count;
+  };
+}
+
+const counter = makeCounter();
+console.log(counter()); // Output: 1
+console.log(counter()); // Output: 2
+```
+
+In the example above, `increment` maintains a reference to the `count` variable declared in `makeCounter`'s environment long after `makeCounter` has returned.
+
+---
+
+> [!NOTE]
+> Closures are widely used in JavaScript for data privacy (encapsulation), callback handlers, and memoization patterns.
+
+
+```python copy filename="example.py" 
+#define a function
+def area_rect():
+    width = 5
+    height = 10
+    area = width * height
+    print(area)
+
+#call a function
+area_rect()
+area_rect()
+area_rect()
+
+```

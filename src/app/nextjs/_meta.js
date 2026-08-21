@@ -1,3 +1,3 @@
 export default {
-  index: 'Next.js Overview',
+  index: 'Next.js Overview'
 }
